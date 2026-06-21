@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+     <section class="contact-section section-padding" id="section_6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+                            <div class="contact-info-wrap">
+                                <h2>Get in touch</h2>
+
+                                <div class="contact-image-wrap d-flex flex-wrap">
+                                    <img src="{{ url_for('static', filename='images/avatar/profile.jpeg') }}" class="img-fluid avatar-image" alt="">
+
+                                    <div class="d-flex flex-column justify-content-center ms-3">
+                                        <p class="mb-0">Tefo Molemohi</p>
+                                        <p class="mb-0"><strong>HR & Office Manager</strong></p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info">
+                                    <h5 class="mb-3">Contact Infomation</h5>
+
+                                    <p class="d-flex mb-2">
+                                        <i class="bi-geo-alt me-2"></i>
+                                        UCD, Professional Academy, Ireland
+                                    </p>
+
+                                    <p class="d-flex mb-2">
+                                        <i class="bi-telephone me-2"></i>
+
+                                        <a href="tel: 353 89 9000 78">
+                                           +353 89 9000 78
+                                        </a>
+                                    </p>
+
+                                    <p class="d-flex">
+                                        <i class="bi-envelope me-2"></i>
+
+                                        <a href="mailto:info@teemusic.com">
+                                            info@teemusic.com
+                                        </a>
+                                    </p>
+
+                                    <a href="https://www.google.com/maps" target="_blank" class="custom-btn btn mt-3">Get Direction</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12 mx-auto">
+                            
+                                <h2>Booking form</h2>
+
+                                <p class="mb-4">Or, you can just send an email:
+                                    <a href="#">info@teemusic.com</a>
+                                </p>
+<form class="custom-form contact-form"  id="booking-form">
+
+    <div class="form-group">
+
+        <label>Full Name</label>
+
+        <input type="text"
+               id="name"
+               class="form-control"
+               required>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Email Address</label>
+
+        <input type="email"
+               id="email"
+               class="form-control"
+               required>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Session Type</label>
+
+        <select id="session_type"
+                class="form-control"
+                required>
+
+            <option value="">Select Session</option>
+
+            <option value="Recording">
+                Recording
+            </option>
+
+            <option value="Mixing & Mastering">
+                Mixing & Mastering
+            </option>
+
+            <option value="Beat Production">
+                Beat Production
+            </option>
+
+        </select>
+
+    </div>
+
+    <button type="submit" class="btn" id="booking-submit-btn">
+       <span class="btn-text">
+        Submit Booking
+    </span>
+
+  
+    </button>
+
+</form>
+
+<div id="booking-message"></div>
+
+
+
+
+                        </div>
+
+                    </div>
+					
+				
+					
+                </div>
+            </section>
+       
+
+{% endblock %}

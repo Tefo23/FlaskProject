@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="teeMusic | {{ title }}">
+	<meta property="og:description" content="teeMusic Recording Studio is a creative hub dedicated to helping artists transform their musical ideas into high-quality sound. Founded with a passion for music production and artistic expression, our studio provides a comfortable and professional environment where musicians, vocalists, and creators can bring their projects to life.">
+	<meta property="og:image" itemprop="image" content="">
+	<link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/png">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	  <!-- CSS FILES -->        
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+        <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+
+        <link href="{{ url_for('static', filename='css/modern.css') }}" rel="stylesheet">
+
+</head>
+<body>
+   <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-8 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-geo-alt me-2"></i>
+                            UCD, Professional Academy, Ireland
+                        </p>
+
+                        <p class="d-flex mb-0">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:info@teemusic.com">
+                                info@teemusic.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-facebook"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+		
+		
+		
+		 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                   <img src="{{ url_for('static', filename='images/mylogo.png') }}" class="logo img-fluid" alt="logo Image">
+                   
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                           
+							<a  href="/" class="nav-link {% if current_page == 'home' %}active{% endif %}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                           <a href="/about" class="nav-link {% if current_page == 'about' %}active{% endif %}">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/services" class="nav-link {% if current_page == 'services' %}active{% endif %}">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/artists" class="nav-link {% if current_page == 'artists' %}active{% endif %}">Artists</a>
+                        </li>
+						<li class="nav-item">
+                            <a href="/events" class="nav-link {% if current_page == 'events' %}active{% endif %}">Upcoming Events</a>
+                        </li>
+
+                      
+                       
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn btn" href="/bookings">Book Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+ <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-4">
+                        <img src="{{ url_for('static', filename='images/mylogo_retina.png') }}" class="logo img-fluid" alt="">
+						<p class="text-white mt-3">We are a creative hub dedicated to helping artists transform their musical ideas into high-quality sound. </p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item"><a href="/about" class="footer-menu-link">Our Story</a></li>
+
+                            <li class="footer-menu-item"><a href="/services" class="footer-menu-link">Our Services</a></li>
+
+                            <li class="footer-menu-item"><a href="/artists" class="footer-menu-link">Recording Artists</a></li>
+
+                            <li class="footer-menu-item"><a href="/events" class="footer-menu-link"><i class="bi-calendar me-2"></i> Upcoming Events</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link"> <i class="bi-apple me-2"></i> Apple Music</a></li>
+							<li class="footer-menu-item"><a href="#" class="footer-menu-link"><i class="bi-spotify me-2"></i> Spotify</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                        <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+                        <p class="text-white d-flex ">
+                            <i class="bi-telephone me-2"></i>
+
+                            <a href="tel:+353 89 9000 78" class="site-footer-link">
+                                +353 89 9000 78
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:info@teemusic.com" class="site-footer-link">
+                                info@teemusic.com
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex ">
+                            <i class="bi-geo-alt me-2"></i>
+                             UCD, Professional Academy, Ireland
+                        </p>
+
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-7 col-md-7 col-12">
+                            <p class="copyright-text mb-0">Copyright © teeMusic Recording Studio.
+                        	Python/Flask Assignment: <a href="#" target="_blank">Tefo Molemohi</a></p>
+                        </div>
+                        
+                        <div class="col-lg-5 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-facebook"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-linkedin"></a>
+                                </li>
+
+                               
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+ <!-- JAVASCRIPT FILES -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+  <section class="cta-section section-padding " >
+                <div class="container">
+                    <div class="row">
+
+                       
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block-wrap">
+                                <img src="{{ url_for('static', filename='images/artists/artist1.jpg') }}" class="custom-block-image img-fluid" alt="">
+
+                                <div class="custom-block">
+                                    <div class="custom-block-body">
+                                       <h5>Hippy Rock</h5>
+										<p>Genre: Country</p>
+										<p>Current Album: West Side</p>
+                                    </div>
+
+                                    <a href="/bookings" class="custom-btn btn">Book now</a>
+                                </div>
+                            </div>
+                        </div> 
+						
+						
+						 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block-wrap">
+                                <img src="{{ url_for('static', filename='images/artists/artist2.jpg') }}" class="custom-block-image img-fluid" alt="">
+
+                                <div class="custom-block">
+                                    <div class="custom-block-body">
+                                       <h5>Beyonce</h5>
+										<p>Genre: BnB/Pop</p>
+										<p>Current Album: Lemonadee</p>
+                                    </div>
+
+                                    <a href="/bookings" class="custom-btn btn">Book now</a>
+                                </div>
+                            </div>
+                        </div>  
+						
+						<div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block-wrap">
+                                <img src="{{ url_for('static', filename='images/artists/artist3.jpg') }}" class="custom-block-image img-fluid" alt="">
+
+                                <div class="custom-block">
+                                    <div class="custom-block-body">
+                                       <h5>The Calling</h5>
+										<p>Genre: Gospel Music</p>
+										<p>Current Album: Angels</p>
+                                    </div>
+
+                                    <a href="/bookings" class="custom-btn btn">Book now</a>
+                                </div>
+                            </div>
+                        </div> 
+						
+						<div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block-wrap">
+                                <img src="{{ url_for('static', filename='images/artists/artist4.jpg') }}" class="custom-block-image img-fluid" alt="">
+
+                                <div class="custom-block">
+                                    <div class="custom-block-body">
+                                       <h5>Post Melon</h5>
+										<p>Genre: Rap/Hip Hop</p>
+										<p>Current Album: Roses</p>
+                                    </div>
+
+                                    <a href="/bookings" class="custom-btn btn">Book now</a>
+                                </div>
+                            </div>
+                        </div> 
+                       
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+{% endblock %}
